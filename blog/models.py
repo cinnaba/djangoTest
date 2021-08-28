@@ -4,6 +4,8 @@ class Post(models.Model):
     title = models.CharField(max_length=30)
 
     content = models.TextField()
+    #hook_text는 요약문
+    hook_text = models.CharField(max_length=40, blank=True)
 
     head_image = models.ImageField(upload_to='blog/images/%y/%m/%d/', blank='True')
     file_upload = models.FileField(upload_to='blog/files/%y/%m/%d/', blank='True')

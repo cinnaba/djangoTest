@@ -76,7 +76,10 @@
                 <div class="card-body">
                     <div class="small text-muted">Morning star</div>
                     <h2 class="card-title">{{ p.title }}</h2>
-                    <p class="card-text">{{ p.content }}</p>
+                    {% if p.hook_text%}
+                    <h6 class="text-muted">{{ p.hook_text }}</p>
+                    {% endif %}
+                    <p class="card-text">{{ p.content | truncatechars:10  }}</p>
                     <a class="btn btn-primary" href="{{ p.get_absolute_url }}">Read more →</a>
                 </div>
             </div>
