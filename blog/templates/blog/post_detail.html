@@ -51,6 +51,9 @@
                 </header>
                 <!-- Preview image figure-->
                 <figure class="mb-4"><img class="img-fluid rounded" src="https://dummyimage.com/900x400/ced4da/6c757d.jpg" alt="..." /></figure>
+                {% if post.file_upload %}
+                <a href="{{ post.file_upload.url }}" class="btn btn-secondary btn-lg active" role="button"  download aria-pressed="true">Download</a>
+                {% endif %}
                 <!-- Post content-->
                 <section class="mb-5">
                     <p class="fs-5 mb-4">Science is an enterprise that should be cherished as an activity of the free human mind. Because it transforms who we are, how we live, and it gives us an understanding of our place in the universe.</p>
